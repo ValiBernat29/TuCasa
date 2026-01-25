@@ -2,34 +2,42 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     
+    // --- 1. Mobile Menu Toggle ---
     const menuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-    const menuIcon = menuBtn.querySelector('.material-symbols-outlined');
+    // We use the '?' (optional chaining) just in case the icon isn't found on a specific page
+    const menuIcon = menuBtn ? menuBtn.querySelector('.material-symbols-outlined') : null;
 
-    menuBtn.addEventListener('click', () => {
-
-        mobileMenu.classList.toggle('hidden');
-        
-
-        if (mobileMenu.classList.contains('hidden')) {
-            menuIcon.textContent = 'menu';
-        } else {
-            menuIcon.textContent = 'close';
-        }
-    });
+    if (menuBtn && mobileMenu && menuIcon) {
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.textContent = 'menu';
+            } else {
+                menuIcon.textContent = 'close';
+            }
+        });
+    }
 
     // --- 2. Smooth Scrolling for Anchor Links ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+            
             const targetId = this.getAttribute('href');
             if (targetId === '#') return; // Ignore empty links
 
+            // Only prevent default if the target actually exists on this page
             const targetElement = document.querySelector(targetId);
+            
             if (targetElement) {
-                // Close mobile menu if open
-                mobileMenu.classList.add('hidden');
-                menuIcon.textContent = 'menu';
+                e.preventDefault(); // Stop the instant jump
+                
+                // Close mobile menu if open (safely)
+                if (mobileMenu && menuIcon) {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.textContent = 'menu';
+                }
 
                 // Scroll smoothly
                 targetElement.scrollIntoView({
@@ -40,11 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- 3. Fade-In Animation on Scroll ---
-    // We will use IntersectionObserver to detect when elements enter the screen
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.1 // Trigger when 10% of the element is visible
+        threshold: 0.1 
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -52,12 +59,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('opacity-100', 'translate-y-0');
                 entry.target.classList.remove('opacity-0', 'translate-y-10');
-                observer.unobserve(entry.target); // Only animate once
+                observer.unobserve(entry.target); 
             }
         });
     }, observerOptions);
 
-    // Apply animation classes to sections
+    // Apply animation classes
+    // We added the '?' to avoid errors if querySelectorAll finds nothing
     const animateElements = document.querySelectorAll('section, h2, .group');
     animateElements.forEach(el => {
         el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');

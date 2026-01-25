@@ -250,22 +250,6 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = menuBtn.querySelector('.material-symbols-outlined');
-
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                
-                if (mobileMenu.classList.contains('hidden')) {
-                    menuIcon.textContent = 'menu';
-                } else {
-                    menuIcon.textContent = 'close';
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
