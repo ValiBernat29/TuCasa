@@ -287,59 +287,6 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            
-            // --- 1. Mobile Menu Logic ---
-            const menuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = menuBtn.querySelector('.material-symbols-outlined');
-            const mobileLinks = document.querySelectorAll('.mobile-link');
-
-            // Open/Close menu
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                
-                // Toggle icon
-                if (mobileMenu.classList.contains('hidden')) {
-                    menuIcon.textContent = 'menu';
-                } else {
-                    menuIcon.textContent = 'close';
-                }
-            });
-
-            // Close menu when a link is clicked
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    menuIcon.textContent = 'menu';
-                });
-            });
-
-            // --- 2. Fade-In Animation on Scroll ---
-            const observerOptions = {
-                root: null,
-                threshold: 0.1 // Trigger when 10% visible
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('opacity-100', 'translate-y-0');
-                        entry.target.classList.remove('opacity-0', 'translate-y-10');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            // Select elements to animate
-            const animateElements = document.querySelectorAll('section > div, h2, .group');
-            
-            animateElements.forEach(el => {
-                el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
-                observer.observe(el);
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
