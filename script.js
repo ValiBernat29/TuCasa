@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 1. Mobile Menu Toggle ---
     const menuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-    // We use the '?' (optional chaining) just in case the icon isn't found on a specific page
     const menuIcon = menuBtn ? menuBtn.querySelector('.material-symbols-outlined') : null;
 
     if (menuBtn && mobileMenu && menuIcon) {
@@ -31,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
-                e.preventDefault(); // Stop the instant jump
+                e.preventDefault();
                 
                 // Close mobile menu if open (safely)
                 if (mobileMenu && menuIcon) {
@@ -65,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     // Apply animation classes
-    // We added the '?' to avoid errors if querySelectorAll finds nothing
     const animateElements = document.querySelectorAll('section, h2, .group');
     animateElements.forEach(el => {
         el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
