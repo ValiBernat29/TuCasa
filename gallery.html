@@ -60,42 +60,28 @@
             opacity: 1;
         }
     </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark font-display text-[#121717] dark:text-[#f9f9f6] transition-colors duration-300">
-<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-<!-- Navigation -->
 <header class="sticky top-0 z-50 w-full border-b border-solid border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 md:px-20 lg:px-40 py-4">
-<div class="mx-auto flex max-w-[1280px] items-center justify-between">
-<div class="flex items-center gap-10">
-<div class="flex items-center gap-3">
-<div class="size-8 text-primary">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
-</svg>
-</div>
-<h1 class="text-xl font-extrabold tracking-tight">PARQUET <span class="text-primary font-light">&amp;</span> RENO</h1>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="index.html">Home</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Portfolio</a>
-<a class="text-sm font-medium opacity-70 hover:opacity-100 transition-opacity" href="#">Services</a>
-<a class="text-sm font-medium opacity-70 hover:opacity-100 transition-opacity" href="#">Materials</a>
-<a class="text-sm font-medium opacity-70 hover:opacity-100 transition-opacity" href="#">Contact</a>
-</nav>
-</div>
-<div class="flex items-center gap-6">
-<div class="hidden lg:flex items-center bg-primary/5 dark:bg-white/5 rounded-lg px-3 py-1.5">
-<span class="material-symbols-outlined text-primary text-xl">search</span>
-<input class="bg-transparent border-none focus:ring-0 text-sm w-40 placeholder:text-primary/40" placeholder="Search materials..." type="text"/>
-</div>
-<button class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
-                        Request Quote
-                    </button>
-</div>
-</div>
+    <div class="mx-auto flex max-w-[1280px] items-center justify-between">
+        
+        <div class="flex items-center gap-10">
+            
+            <a href="index.html" class="flex items-center gap-4 shrink-0">
+                <img src="TuCasaLogo.png" alt="Grupul Tu Casa" class="h-12 w-auto object-contain" />
+                <span class="text-xl font-medium tracking-tight whitespace-nowrap">Grupul Tu Casa</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="index.html">Home</a>
+                <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Portfolio</a>
+                <!-- <a class="text-sm font-medium opacity-70 hover:opacity-100 transition-opacity" href="#">Services</a>
+                <a class="text-sm font-medium opacity-70 hover:opacity-100 transition-opacity" href="#">Materials</a> -->
+                <a class="text-sm font-medium opacity-70 hover:opacity-100 transition-opacity" href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </div>
 </header>
 <main class="flex-1 px-6 md:px-20 lg:px-40 py-12 lg:py-20 mx-auto max-w-[1280px] w-full">
-<!-- Hero Header -->
+
 <div class="mb-16">
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
 <div class="max-w-2xl">
@@ -106,114 +92,71 @@
                         </p>
 </div>
 <div class="flex items-center gap-2 text-sm font-bold text-primary cursor-pointer hover:underline">
-<span>View material catalog</span>
-<span class="material-symbols-outlined">arrow_right_alt</span>
+<span>
+    <a href="https://photos.app.goo.gl/CxpB3XhFRrrXUWyS8" target="_blank" rel="noopener noreferrer">
+        View full catalog
+    </a>
+</span><span class="material-symbols-outlined">arrow_right_alt</span>
 </div>
 </div>
 </div>
-<!-- Filter Chips -->
+
 <div class="flex flex-wrap gap-3 mb-12 items-center">
-<span class="text-xs font-black uppercase tracking-widest opacity-40 mr-4">Filter By</span>
+<!-- <span class="text-xs font-black uppercase tracking-widest opacity-40 mr-4">Filter By</span> -->
 <button class="px-5 py-2 rounded-full bg-primary text-white text-sm font-bold transition-all">All Projects</button>
-<button class="px-5 py-2 rounded-full bg-white dark:bg-white/10 border border-primary/10 text-sm font-medium hover:bg-primary/5 transition-all">Kitchens</button>
+<!-- <button class="px-5 py-2 rounded-full bg-white dark:bg-white/10 border border-primary/10 text-sm font-medium hover:bg-primary/5 transition-all">Kitchens</button>
 <button class="px-5 py-2 rounded-full bg-white dark:bg-white/10 border border-primary/10 text-sm font-medium hover:bg-primary/5 transition-all">Living Rooms</button>
 <button class="px-5 py-2 rounded-full bg-white dark:bg-white/10 border border-primary/10 text-sm font-medium hover:bg-primary/5 transition-all">Classic Parquet</button>
 <button class="px-5 py-2 rounded-full bg-white dark:bg-white/10 border border-primary/10 text-sm font-medium hover:bg-primary/5 transition-all">Modern Renovation</button>
-<button class="px-5 py-2 rounded-full bg-white dark:bg-white/10 border border-primary/10 text-sm font-medium hover:bg-primary/5 transition-all">Commercial</button>
+<button class="px-5 py-2 rounded-full bg-white dark:bg-white/10 border border-primary/10 text-sm font-medium hover:bg-primary/5 transition-all">Commercial</button> -->
 </div>
-<!-- Masonry Grid -->
+
 <div class="gallery-masonry">
-<!-- Card 1 -->
-<div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5">
-<div class="aspect-[4/5] bg-cover bg-center" data-alt="Close up of oak herringbone parquet floor" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCWe2hZaWlgWieGYBcqDubxiE5gNlN6Xw2T-YE_9QZvHMB2tnDlZpc5CZnLwJ4gPCi9vm_hAxQA0XTkexNoejV75zHtqYD1BHQs2a_A14F1KGGDXqUE9R3xueIzA0Ye30s-W1aQ0Z1zB8_HM0GOP6WHYJjA8IroZcXtKcscH1e7dlXJ3F2Hfy5qB_LK0EjM2h_o43JqH19RRntr0C7lMjHhdlGqqUssEDfFHyW7k_oQt2Oss3MXXAOYadKzZTRSGn3PfjlVE4WdTQ');"></div>
-<div class="project-overlay absolute inset-0 p-8 flex flex-col justify-end text-white">
-<span class="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 opacity-80">Classic Parquet</span>
-<h3 class="text-2xl font-bold mb-4">Oak Herringbone in Apartment 4B</h3>
-<div class="border-t border-white/20 pt-4">
-<p class="text-xs font-semibold mb-2 opacity-60">PRIMARY MATERIALS</p>
-<div class="flex flex-wrap gap-2">
-<span class="bg-white/10 backdrop-blur-md px-2 py-1 rounded text-[10px] border border-white/20">12mm Solid Oak</span>
-<span class="bg-white/10 backdrop-blur-md px-2 py-1 rounded text-[10px] border border-white/20">Matte Oil Finish</span>
+    
+    <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie1.jpg')">
+        <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie1.jpg');"></div>
+        <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+        </div>
+    </div>
+
+    <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie2.jpg')">
+        <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie2.jpg');"></div>
+        <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+        </div>
+    </div>
+
+    <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie3.jpg')">
+        <div class="aspect-[1/1] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie3.jpg');"></div>
+        <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+        </div>
+    </div>
+
+    <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie4.jpg')">
+        <div class="aspect-[4/3] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie4.jpg');"></div>
+        <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+        </div>
+    </div>
+
+    <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie5.jpg')">
+        <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie5.jpg');"></div>
+        <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+        </div>
+    </div>
+
+    <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie6.jpg')">
+        <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie6.jpg');"></div>
+        <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+        </div>
+    </div>
+
 </div>
-</div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5">
-<div class="aspect-[3/4] bg-cover bg-center" data-alt="Modern minimalist kitchen with island" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDfLd7l-gvlL4rGJt9mx4h2XKrhppzBa-OHIkZv97KKXUkML2FgMtw2-KUbT8IlqWOXhXbSxxdKDAzUNvK6dt5bW0S1Vi0IP_klgCJL5Q7xNhxfe9u3bruAMpGs4xOFEhMeyWSCs2hfItsEyuGg3YWjI32AeHL8S4ytMG-sTRGa9gNwX-zHOlBeGrd1h-P-fLAc-KteS9HuvRr9Jb_BglVdYAWY0BcoC7E9FOBcA4O36qBv-ypHowzXy-ro28LIUlMdOK9-tvQzvQ');"></div>
-<div class="project-overlay absolute inset-0 p-8 flex flex-col justify-end text-white">
-<span class="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 opacity-80">Modern Renovation</span>
-<h3 class="text-2xl font-bold mb-4">The Minimalist Kitchen</h3>
-<div class="border-t border-white/20 pt-4">
-<p class="text-xs font-semibold mb-2 opacity-60">PRIMARY MATERIALS</p>
-<div class="flex flex-wrap gap-2">
-<span class="bg-white/10 backdrop-blur-md px-2 py-1 rounded text-[10px] border border-white/20">Quartzite Stone</span>
-<span class="bg-white/10 backdrop-blur-md px-2 py-1 rounded text-[10px] border border-white/20">Walnut Veneer</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Card 3 -->
-<div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5">
-<div class="aspect-[1/1] bg-cover bg-center" data-alt="Luxurious living room with wide plank flooring" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDzc7NLVumFsBJNbaTiSnqtLP8PGnom-WTd8YGrmAOa5PRzwVl2mpUcvc3V87YEh7VYUQL4yFhLAHYmBynF5ozXHC_u_4n7rNUJ4ejKn08NovhjV-KtDfYLQ_MrokPb-J-phr5xagXhmanUClsAD69S7X_u_bhI5V5jKo2142fXSe0ddnPth3wbVVjmEW00xPSiYwRcqegBl_Ev2CW4IHFtP8b6tBvj-SV1rfZUlQW_nEY3gVRjy7JJaUip8mv6uglEOL8p9F6d5Q');"></div>
-<div class="project-overlay absolute inset-0 p-8 flex flex-col justify-end text-white">
-<span class="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 opacity-80">Living Rooms</span>
-<h3 class="text-2xl font-bold mb-4">Riverside Penthouse</h3>
-<div class="border-t border-white/20 pt-4">
-<p class="text-xs font-semibold mb-2 opacity-60">PRIMARY MATERIALS</p>
-<div class="flex flex-wrap gap-2">
-<span class="bg-white/10 backdrop-blur-md px-2 py-1 rounded text-[10px] border border-white/20">Wide Plank Smoked Oak</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Card 4 -->
-<div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5">
-<div class="aspect-[4/3] bg-cover bg-center" data-alt="Heritage home renovation with original features" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBhH5rWYktNXPQ_ejyPlhj-dhKUVmwR1jSqfr0-v5TgzdgaMEtUDyd6fzbtVacCHyxeo3OWppMaYca-gyvPgWELDg8bmYd9Gpn8RDv6rgz2qAXQKcFXGzp2lPbMYwFeWepS90ceiDhIW05Pmh79u1ZXgIaVAsKWcqte790KBBwBF4IBUviqTJNW2AGc_cUL8D1FkErXOPt2omgvJdrs8-9vL-SEoqNgsaPoAkiCteUNBrTBnyBhqy9RVbau0ISvbBzjlrmZ8-4Nuw');"></div>
-<div class="project-overlay absolute inset-0 p-8 flex flex-col justify-end text-white">
-<span class="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 opacity-80">Heritage Renovation</span>
-<h3 class="text-2xl font-bold mb-4">Old Town Restoration</h3>
-<div class="border-t border-white/20 pt-4">
-<p class="text-xs font-semibold mb-2 opacity-60">PRIMARY MATERIALS</p>
-<div class="flex flex-wrap gap-2">
-<span class="bg-white/10 backdrop-blur-md px-2 py-1 rounded text-[10px] border border-white/20">Reclaimed Pine</span>
-<span class="bg-white/10 backdrop-blur-md px-2 py-1 rounded text-[10px] border border-white/20">Brass Inlays</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Card 5 -->
-<div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5">
-<div class="aspect-[3/4] bg-cover bg-center" data-alt="Modern corporate office with wood flooring" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJqTEx1wdusfmEDr6FFeJINKjbOkxM11CS1TJ4mX-RovaRqdiZXaKGEVZL3Lga3RDFXJk1ZMhsLVzULVOlzC2an6HCjDyl8B4LceHJcAcK6F4_UT3ICk8Z--lBPa17yz1EUw0WYwwmHsL_TeZoVEMbd7N5AWYECYubPoOmGKrOAs7zJuf2h4EKK_t1lKRD2GYMN1vCbMINce-CgjA-GupAoenUKgPANBJYLIbppd-dGaRv0L5T40r9XVLhjpn27dIWlB_e5ePIcA');"></div>
-<div class="project-overlay absolute inset-0 p-8 flex flex-col justify-end text-white">
-<span class="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 opacity-80">Commercial</span>
-<h3 class="text-2xl font-bold mb-4">Foundry Office Suite</h3>
-<div class="border-t border-white/20 pt-4">
-<p class="text-xs font-semibold mb-2 opacity-60">PRIMARY MATERIALS</p>
-<div class="flex flex-wrap gap-2">
-<span class="bg-white/10 backdrop-blur-md px-2 py-1 rounded text-[10px] border border-white/20">Engineered Walnut</span>
-<span class="bg-white/10 backdrop-blur-md px-2 py-1 rounded text-[10px] border border-white/20">High-Traffic Lacquer</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Card 6 -->
-<div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5">
-<div class="aspect-[4/5] bg-cover bg-center" data-alt="Light wood flooring in a sunny bedroom" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9fp_mnGeafRCPq4BjFOwEHRbjmwn1PP0FCyJ2N18dxh7pSIaGsdT9pz9LbEwZKXjFTM585aVFdbzjkhNX7bapKFEqeZ2Lj7uZIMuTnkTEGlswcv71VWTJk_A4n-YMS_m4lPv3QwPOQ_XWt2Oc6yy2CMDqxSOIBxahVoy1NytwdsFMtlwOIFBtXtpXljdikUjrL5zJIxGhGv8OfRVWPJqgstanaqhvZR56g_0tVcfbM727svt7odUhDNhQ_stTsx29K2XczludUA');"></div>
-<div class="project-overlay absolute inset-0 p-8 flex flex-col justify-end text-white">
-<span class="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 opacity-80">Classic Parquet</span>
-<h3 class="text-2xl font-bold mb-4">Scandinavian Master Suite</h3>
-<div class="border-t border-white/20 pt-4">
-<p class="text-xs font-semibold mb-2 opacity-60">PRIMARY MATERIALS</p>
-<div class="flex flex-wrap gap-2">
-<span class="bg-white/10 backdrop-blur-md px-2 py-1 rounded text-[10px] border border-white/20">Ash Chevron</span>
-<span class="bg-white/10 backdrop-blur-md px-2 py-1 rounded text-[10px] border border-white/20">White Lye Wash</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Load More -->
+
 <div class="flex flex-col items-center mt-20 gap-4">
 <button class="flex items-center gap-3 px-10 py-4 bg-primary/10 dark:bg-white/5 hover:bg-primary hover:text-white text-primary text-sm font-bold rounded-lg transition-all border border-primary/20">
 <span>Explore More Projects</span>
@@ -222,17 +165,13 @@
 <p class="text-xs opacity-40 font-medium">Showing 6 of 42 architectural projects</p>
 </div>
 </main>
-<!-- Footer -->
+
 <footer class="mt-20 border-t border-primary/10 py-16 px-6 md:px-20 lg:px-40 bg-white/50 dark:bg-black/20">
 <div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
 <div class="col-span-1 md:col-span-2">
 <div class="flex items-center gap-3 mb-6">
-<div class="size-6 text-primary">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
-</svg>
-</div>
-<h2 class="text-lg font-extrabold tracking-tight">PARQUET <span class="text-primary font-light">&amp;</span> RENO</h2>
+<img src="TuCasaLogo.png" alt="Grupul Tu Casa" class="h-8 w-auto object-contain" />
+<h2 class="text-lg font-semibold tracking-tight">Grupul Tu Casa</h2>
 </div>
 <p class="text-sm leading-relaxed opacity-60 max-w-sm mb-8">
                         Setting the standard for premium residential flooring and renovation since 2008. Family owned, architectural precision.
@@ -269,7 +208,7 @@
 </div>
 </div>
 <div class="max-w-[1280px] mx-auto mt-16 pt-8 border-t border-primary/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-bold uppercase tracking-widest opacity-40">
-<p>© 2024 Parquet &amp; Reno Ltd.</p>
+<p>© Grupul Tu Casa</p>
 <div class="flex gap-8">
 <a href="#">Privacy Policy</a>
 <a href="#">Terms of Service</a>
@@ -277,4 +216,14 @@
 </div>
 </footer>
 </div>
+<div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 hidden flex items-center justify-center p-4 backdrop-blur-sm" onclick="closeLightbox()">
+    <div class="relative max-w-5xl w-full h-full flex items-center justify-center">
+        <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <img id="lightbox-img" src="" alt="Expanded View" class="max-h-full max-w-full rounded-lg shadow-2xl object-contain cursor-default" onclick="event.stopPropagation()" />
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body></html>

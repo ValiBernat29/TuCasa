@@ -1,8 +1,26 @@
 "use strict";
 
+function openLightbox(imageSrc) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    if (lightbox && lightboxImg) {
+        lightboxImg.src = imageSrc;
+        lightbox.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; 
+    }
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        lightbox.classList.add('hidden');
+        document.body.style.overflow = 'auto'; 
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- 1. Mobile Menu Toggle ---
     const menuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = menuBtn ? menuBtn.querySelector('.material-symbols-outlined') : null;
@@ -16,24 +34,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 2. Enhanced Smooth Scrolling ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
+            if (targetId === '#' || !targetId) return;
 
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 e.preventDefault();
-                
-                // Close mobile menu if navigating
                 mobileMenu?.classList.add('hidden');
                 if (menuIcon) menuIcon.textContent = 'menu';
 
-                const offset = 80; // Height of your sticky header
-                const bodyRect = document.body.getBoundingClientRect().top;
-                const elementRect = targetElement.getBoundingClientRect().top;
-                const elementPosition = elementRect - bodyRect;
+                const offset = 80; 
+                const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
                 const offsetPosition = elementPosition - offset;
 
                 window.scrollTo({
@@ -44,10 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 3. Refined Intersection Observer ---
     const observerOptions = {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px' // Triggers slightly before the element enters view
+        threshold: 0.1, 
+        rootMargin: '0px 0px -50px 0px' 
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -60,10 +72,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Apply animation classes to cards and headers
-    const animateElements = document.querySelectorAll('section, h2, .group, .animate-on-scroll');
+    const animateElements = document.querySelectorAll('.project-card, .animate-on-scroll');
+    
     animateElements.forEach(el => {
         el.classList.add('transition-all', 'duration-1000', 'ease-out', 'opacity-0', 'translate-y-10');
         observer.observe(el);
     });
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Escape") {
+            closeLightbox();
+        }
+    });
+
+    const dateInput = document.getElementById('consultation-date');
+    if (dateInput) {
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+    }
 });
