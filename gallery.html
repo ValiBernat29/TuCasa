@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Project &amp; Materials Gallery | Parquet &amp; Reno</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="light" lang="ro">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Gallery | Grupul Tu Casa</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -18,6 +18,8 @@
                         "accent-terracotta": "#B97C5D",
                         "background-light": "#f9f9f6",
                         "background-dark": "#1c1f21",
+                        "charcoal": "#212121",
+                        "stone": "#595959"
                     },
                     fontFamily: {
                         "display": ["Manrope", "sans-serif"]
@@ -32,7 +34,7 @@
             },
         }
     </script>
-<style>
+    <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
@@ -60,170 +62,190 @@
             opacity: 1;
         }
     </style>
-<header class="sticky top-0 z-50 w-full border-b border-solid border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 md:px-20 lg:px-40 py-4">
-    <div class="mx-auto flex max-w-[1280px] items-center justify-between">
-        
-        <div class="flex items-center gap-10">
-            
-            <a href="index.html" class="flex items-center gap-4 shrink-0">
-                <img src="TuCasaLogo.png" alt="Grupul Tu Casa" class="h-12 w-auto object-contain" />
-                <span class="text-xl font-medium tracking-tight whitespace-nowrap">Grupul Tu Casa</span>
-            </a>
-
-            <nav class="hidden md:flex items-center gap-8">
-                <a class="text-sm font-semibold hover:text-primary transition-colors" href="index.html">Home</a>
-                <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Portfolio</a>
-                <!-- <a class="text-sm font-medium opacity-70 hover:opacity-100 transition-opacity" href="#">Services</a>
-                <a class="text-sm font-medium opacity-70 hover:opacity-100 transition-opacity" href="#">Materials</a> -->
-                <a class="text-sm font-medium opacity-70 hover:opacity-100 transition-opacity" href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </div>
-</header>
-<main class="flex-1 px-6 md:px-20 lg:px-40 py-12 lg:py-20 mx-auto max-w-[1280px] w-full">
-
-<div class="mb-16">
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
-<div class="max-w-2xl">
-<h2 class="text-5xl font-black tracking-tighter mb-6 leading-[1.1]">Our Craft in <span class="text-primary">Motion</span></h2>
-<p class="text-lg opacity-70 leading-relaxed font-light">
-                            Explore our curation of high-end parquet installations and architectural renovations. 
-                            Every grain tells a story of precision and sustainable luxury.
-                        </p>
-</div>
-<div class="flex items-center gap-2 text-sm font-bold text-primary cursor-pointer hover:underline">
-<span>
-    <a href="https://photos.app.goo.gl/CxpB3XhFRrrXUWyS8" target="_blank" rel="noopener noreferrer">
-        View full catalog
-    </a>
-</span><span class="material-symbols-outlined">arrow_right_alt</span>
-</div>
-</div>
-</div>
-
-<div class="flex flex-wrap gap-3 mb-12 items-center">
-<!-- <span class="text-xs font-black uppercase tracking-widest opacity-40 mr-4">Filter By</span> -->
-<button class="px-5 py-2 rounded-full bg-primary text-white text-sm font-bold transition-all">All Projects</button>
-<!-- <button class="px-5 py-2 rounded-full bg-white dark:bg-white/10 border border-primary/10 text-sm font-medium hover:bg-primary/5 transition-all">Kitchens</button>
-<button class="px-5 py-2 rounded-full bg-white dark:bg-white/10 border border-primary/10 text-sm font-medium hover:bg-primary/5 transition-all">Living Rooms</button>
-<button class="px-5 py-2 rounded-full bg-white dark:bg-white/10 border border-primary/10 text-sm font-medium hover:bg-primary/5 transition-all">Classic Parquet</button>
-<button class="px-5 py-2 rounded-full bg-white dark:bg-white/10 border border-primary/10 text-sm font-medium hover:bg-primary/5 transition-all">Modern Renovation</button>
-<button class="px-5 py-2 rounded-full bg-white dark:bg-white/10 border border-primary/10 text-sm font-medium hover:bg-primary/5 transition-all">Commercial</button> -->
-</div>
-
-<div class="gallery-masonry">
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-charcoal dark:text-gray-100 antialiased">
     
-    <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie1.jpg')">
-        <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie1.jpg');"></div>
-        <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+    <header class="sticky top-0 z-50 w-full border-b border-solid border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 md:px-20 lg:px-40 py-4">
+        <div class="mx-auto flex max-w-[1280px] items-center justify-between">
+            
+            <div class="flex items-center gap-10 w-full justify-between">
+                <a href="index.html" class="flex items-center gap-4 shrink-0">
+                    <img src="TuCasaLogo.png" alt="Grupul Tu Casa" class="h-12 w-auto object-contain" />
+                    <span class="text-xl font-medium tracking-tight whitespace-nowrap">Grupul Tu Casa</span>
+                </a>
+
+                <div class="flex items-center gap-8">
+                    <nav class="hidden md:flex items-center gap-8">
+                        <a class="text-sm font-semibold hover:text-primary transition-colors translate-text" href="index.html" data-ro="Acasă" data-en="Home">Home</a>
+                        <a class="text-sm font-semibold hover:text-primary transition-colors translate-text" href="gallery.html" data-ro="Portofoliu" data-en="Portfolio">Portfolio</a>
+                        <a class="text-sm font-medium opacity-70 hover:opacity-100 transition-opacity translate-text" href="contact.html" data-ro="Contact" data-en="Contact">Contact</a>
+                    </nav>
+
+                    <button id="lang-switch" class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors border border-primary/20 px-3 py-1.5 rounded-full">
+                        <span id="lang-text">EN</span>
+                        <span class="material-symbols-outlined text-sm">language</span>
+                    </button>
+
+                    <a href="requests.html" class="hidden md:block bg-primary text-white py-2.5 px-5 rounded-lg font-bold text-sm transition-all transform active:scale-95 translate-text" data-ro="Solicită Consultanță" data-en="Request Consultation">Solicită Consultanță</a>
+
+                </div>
+            </div>
         </div>
-    </div>
+    </header>
 
-    <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie2.jpg')">
-        <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie2.jpg');"></div>
-        <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
-        </div>
-    </div>
+    <main class="flex-1 px-6 md:px-20 lg:px-40 py-12 lg:py-20 mx-auto max-w-[1280px] w-full">
 
-    <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie3.jpg')">
-        <div class="aspect-[1/1] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie3.jpg');"></div>
-        <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
-        </div>
-    </div>
-
-    <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie4.jpg')">
-        <div class="aspect-[4/3] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie4.jpg');"></div>
-        <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
-        </div>
-    </div>
-
-    <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie5.jpg')">
-        <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie5.jpg');"></div>
-        <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
-        </div>
-    </div>
-
-    <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie6.jpg')">
-        <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie6.jpg');"></div>
-        <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
-        </div>
-    </div>
-
-</div>
-
-<div class="flex flex-col items-center mt-20 gap-4">
-<button class="flex items-center gap-3 px-10 py-4 bg-primary/10 dark:bg-white/5 hover:bg-primary hover:text-white text-primary text-sm font-bold rounded-lg transition-all border border-primary/20">
-<span>Explore More Projects</span>
-<span class="material-symbols-outlined text-sm">refresh</span>
-</button>
-<p class="text-xs opacity-40 font-medium">Showing 6 of 42 architectural projects</p>
-</div>
-</main>
-
-<footer class="mt-20 border-t border-primary/10 py-16 px-6 md:px-20 lg:px-40 bg-white/50 dark:bg-black/20">
-<div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
-<div class="col-span-1 md:col-span-2">
-<div class="flex items-center gap-3 mb-6">
-<img src="TuCasaLogo.png" alt="Grupul Tu Casa" class="h-8 w-auto object-contain" />
-<h2 class="text-lg font-semibold tracking-tight">Grupul Tu Casa</h2>
-</div>
-<p class="text-sm leading-relaxed opacity-60 max-w-sm mb-8">
-                        Setting the standard for premium residential flooring and renovation since 2008. Family owned, architectural precision.
+        <div class="mb-16">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+                <div class="max-w-2xl">
+                    <h2 class="text-5xl font-black tracking-tighter mb-6 leading-[1.1] translate-text" 
+                        data-ro="Măiestria Noastră în <span class='text-primary'><i>Mișcare</i></span>" 
+                        data-en="Our Craft in <span class='text-primary'><i>Motion</i></span>">
+                        Our Craft in <span class="text-primary">Motion</span>
+                    </h2>
+                    <p class="text-lg opacity-70 leading-relaxed font-light translate-text"
+                       data-ro="Explorează colecția noastră de parchet de lux și renovări arhitecturale. Fiecare fibră spune o poveste despre precizie și lux durabil."
+                       data-en="Explore our curation of high-end parquet installations and architectural renovations. Every grain tells a story of precision and sustainable luxury.">
+                        Explore our curation of high-end parquet installations and architectural renovations. Every grain tells a story of precision and sustainable luxury.
                     </p>
-<div class="flex gap-4">
-<div class="size-10 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white cursor-pointer transition-all">
-<span class="material-symbols-outlined text-lg">public</span>
-</div>
-<div class="size-10 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white cursor-pointer transition-all">
-<span class="material-symbols-outlined text-lg">photo_camera</span>
-</div>
-<div class="size-10 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white cursor-pointer transition-all">
-<span class="material-symbols-outlined text-lg">mail</span>
-</div>
-</div>
-</div>
-<div>
-<h4 class="font-bold mb-6">Expertise</h4>
-<ul class="space-y-3 text-sm opacity-60">
-<li><a class="hover:text-primary transition-colors" href="#">Custom Parquet</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Kitchen Remodeling</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Historical Restoration</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Floor Maintenance</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold mb-6">Studio</h4>
-<ul class="space-y-3 text-sm opacity-60">
-<li><a class="hover:text-primary transition-colors" href="#">Our Process</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Showroom Appointments</a></li>
-</ul>
-</div>
-</div>
-<div class="max-w-[1280px] mx-auto mt-16 pt-8 border-t border-primary/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-bold uppercase tracking-widest opacity-40">
-<p>© Grupul Tu Casa</p>
-<div class="flex gap-8">
-<a href="#">Privacy Policy</a>
-<a href="#">Terms of Service</a>
-</div>
-</div>
-</footer>
-</div>
-<div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 hidden flex items-center justify-center p-4 backdrop-blur-sm" onclick="closeLightbox()">
-    <div class="relative max-w-5xl w-full h-full flex items-center justify-center">
-        <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white hover:text-primary transition-colors">
-            <span class="material-symbols-outlined text-4xl">close</span>
-        </button>
-        <img id="lightbox-img" src="" alt="Expanded View" class="max-h-full max-w-full rounded-lg shadow-2xl object-contain cursor-default" onclick="event.stopPropagation()" />
-    </div>
-</div>
+                </div>
+                <div class="flex items-center gap-2 text-sm font-bold text-primary cursor-pointer hover:underline">
+                    <span>
+                        <a href="https://photos.app.goo.gl/CxpB3XhFRrrXUWyS8" target="_blank" rel="noopener noreferrer" class="translate-text" data-ro="Vezi catalogul complet" data-en="View full catalog">
+                            View full catalog
+                        </a>
+                    </span>
+                    <span class="material-symbols-outlined">arrow_right_alt</span>
+                </div>
+            </div>
+        </div>
 
-<script src="script.js"></script>
-</body></html>
+        <div class="flex flex-wrap gap-3 mb-12 items-center">
+            <button class="px-5 py-2 rounded-full bg-primary text-white text-sm font-bold transition-all translate-text" data-ro="Toate Proiectele" data-en="All Projects">All Projects</button>
+        </div>
+
+        <div class="gallery-masonry">
+            
+            <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie1.jpg')">
+                <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie1.jpg');"></div>
+                <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                </div>
+            </div>
+
+            <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie2.jpg')">
+                <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie2.jpg');"></div>
+                <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                </div>
+            </div>
+
+            <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie3.jpg')">
+                <div class="aspect-[1/1] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie3.jpg');"></div>
+                <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                </div>
+            </div>
+
+            <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie4.jpg')">
+                <div class="aspect-[4/3] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie4.jpg');"></div>
+                <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                </div>
+            </div>
+
+            <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie5.jpg')">
+                <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie5.jpg');"></div>
+                <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                </div>
+            </div>
+
+            <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie6.jpg')">
+                <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie6.jpg');"></div>
+                <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer id="contact" class="bg-charcoal dark:bg-black text-gray-400 py-20 px-6 mt-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="TuCasaLogo.png" alt="Grupul Tu Casa" class="h-8 w-auto object-contain" />
+                        <h2 class="text-lg font-semibold tracking-tight text-white">Grupul Tu Casa</h2>
+                    </div>
+                    <p class="text-sm leading-relaxed translate-text"
+                       data-ro="Excelență în renovări arhitecturale și pardoseli din lemn de înaltă calitate. Transformăm viziunile în realitate din 1994."
+                       data-en="Excellence in architectural renovation and high-end timber flooring. Transforming London's finest residences since 1994.">
+                        Excellence in architectural renovation and high-end timber flooring. Transforming London's finest residences since 1994.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-6 translate-text" data-ro="Servicii" data-en="Services">Services</h5>
+                    <ul class="space-y-4 text-sm">
+                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Renovări Complete" data-en="Full Home Renovation">Full Home Renovation</a></li>
+                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Parchet Masiv" data-en="Parquet Flooring">Parquet Flooring</a></li>
+                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Tâmplărie Custom" data-en="Custom Millwork">Custom Millwork</a></li>
+                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Montaj Bucătării" data-en="Kitchen Fitting">Kitchen Fitting</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-6 translate-text" data-ro="Companie" data-en="Company">Company</h5>
+                    <ul class="space-y-4 text-sm">
+                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Povestea Noastră" data-en="Our Story">Our Story</a></li>
+                        <li><a class="hover:text-primary transition-colors translate-text" href="gallery.html" data-ro="Galerie" data-en="Gallery">Gallery</a></li>
+                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Cariere" data-en="Careers">Careers</a></li>
+                        <li><a class="hover:text-primary transition-colors translate-text" href="contact.html" data-ro="Contact" data-en="Contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-6 translate-text" data-ro="Contact" data-en="Contact">Contact</h5>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-sm text-primary mt-1">location_on</span>
+                            <span class="translate-text" data-ro="jud. Timiș, sat. Orțișoara, nr. 178" data-en="jud. Timiș, sat. Orțișoara, No. 178">jud. Timiș, sat. Orțișoara, nr. 178</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-sm text-primary">phone</span>
+                            <span><a href="tel:+40768117811" class="hover:text-white transition-colors">+40 (768) 117 811</a></span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-sm text-primary">phone</span>
+                            <span><a href="tel:+40775174342" class="hover:text-white transition-colors">+40 (775) 174 342</a></span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-sm text-primary">mail</span>
+                            <span><a href="mailto:radu@grupultucasa.net" class="hover:text-white transition-colors">radu@grupultucasa.net</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs translate-text" data-ro="© 2024 Grupul Tu Casa. Toate drepturile rezervate." data-en="© 2024 Grupul Tu Casa. All rights reserved.">© 2024 Grupul Tu Casa. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+                    <a class="hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">camera</span></a>
+                    <a class="hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 hidden flex items-center justify-center p-4 backdrop-blur-sm" onclick="closeLightbox()">
+        <div class="relative max-w-5xl w-full h-full flex items-center justify-center">
+            <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-4xl">close</span>
+            </button>
+            <img id="lightbox-img" src="" alt="Expanded View" class="max-h-full max-w-full rounded-lg shadow-2xl object-contain cursor-default" onclick="event.stopPropagation()" />
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

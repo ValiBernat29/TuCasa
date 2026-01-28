@@ -1,5 +1,39 @@
 "use strict";
 
+function openStory() {
+    const modal = document.getElementById('story-modal');
+    const backdrop = document.getElementById('story-backdrop');
+    const panel = document.getElementById('story-panel');
+
+    if (modal && backdrop && panel) {
+        modal.classList.remove('hidden');
+        // Mic delay pentru a permite animația CSS
+        setTimeout(() => {
+            backdrop.classList.remove('opacity-0');
+            panel.classList.remove('translate-y-full');
+        }, 10);
+        document.body.style.overflow = 'hidden'; // Blochează scroll-ul paginii
+    }
+}
+
+function closeStory() {
+    const modal = document.getElementById('story-modal');
+    const backdrop = document.getElementById('story-backdrop');
+    const panel = document.getElementById('story-panel');
+
+    if (modal && backdrop && panel) {
+        // Începe animația de ieșire
+        backdrop.classList.add('opacity-0');
+        panel.classList.add('translate-y-full');
+        
+        // Așteaptă terminarea animației (500ms) înainte de a ascunde div-ul
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Deblochează scroll-ul
+        }, 500);
+    }
+}
+
 function openLightbox(imageSrc) {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
@@ -20,7 +54,41 @@ function closeLightbox() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+    const langBtn = document.getElementById('lang-switch');
+    const langText = document.getElementById('lang-text');
+    const elementsToTranslate = document.querySelectorAll('.translate-text');
+
+    let currentLang = localStorage.getItem('preferredLang') || 'ro';
+
+    function updateLanguage() {
+        document.documentElement.lang = currentLang;
+
+        if (langText) {
+            langText.innerText = currentLang === 'ro' ? 'EN' : 'RO';
+        }
+
+        elementsToTranslate.forEach(el => {
+            const translation = el.getAttribute(`data-${currentLang}`);
+            if (translation) {
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    el.placeholder = translation;
+                } else {
+                    el.innerHTML = translation; 
+                }
+            }
+        });
+    }
+
+    updateLanguage();
+
+    if (langBtn) {
+        langBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'ro' ? 'en' : 'ro';
+            localStorage.setItem('preferredLang', currentLang);
+            updateLanguage();
+        });
+    }
+
     const menuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = menuBtn ? menuBtn.querySelector('.material-symbols-outlined') : null;
@@ -82,6 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', function(event) {
         if (event.key === "Escape") {
             closeLightbox();
+            closeStory(); // Închide și fereastra "Our Story" cu ESC
         }
     });
 
