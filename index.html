@@ -5,7 +5,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Grupul Tu Casa | Renovări & Parchet</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     
     <script id="tailwind-config">
@@ -14,15 +14,14 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#2f605f",
-                        "background-light": "#f9f9f6",
-                        "background-dark": "#1c1f21",
-                        "accent-wood": "#B97C5D",
-                        "charcoal": "#212121",
-                        "stone": "#595959"
+                        "primary": "#bd6628",
+                        "background-light": "#f8f7f7",
+                        "background-dark": "#18181b",
+                        "charcoal": "#1a140f",
                     },
                     fontFamily: {
-                        "display": ["Manrope", "sans-serif"]
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
                     },
                     borderRadius: {
                         "DEFAULT": "0.25rem",
@@ -35,9 +34,11 @@
         }
     </script>
     <style>
-        .sticky-nav { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(8px); }
-        .wood-gradient { background: linear-gradient(135deg, #B97C5D 0%, #8e5d44 100%); }
-        html { scroll-behavior: smooth; }
+        body { font-family: 'Noto Sans', sans-serif; }
+        h1, h2, h3, .font-display { font-family: 'Noto Serif', serif; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #bd6628; border-radius: 3px; }
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-charcoal dark:text-gray-100 antialiased transition-colors duration-300">
@@ -90,7 +91,7 @@
             </div>
             <div class="relative z-20 max-w-7xl mx-auto px-6 w-full">
                 <div class="max-w-2xl bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20 animate-on-scroll">
-                    <span class="inline-block px-3 py-1 bg-accent-wood text-white text-[10px] font-bold uppercase tracking-widest rounded mb-6 translate-text" data-ro="Înființat în 2014" data-en="Established 2014">Înființat în 2014</span>
+                    <span class="inline-block px-3 py-1 bg-primary text-white text-[10px] font-bold uppercase tracking-widest rounded mb-6 translate-text" data-ro="Înființat în 2012" data-en="Established 2012">Înființat în 2012</span>
                     
                     <h1 class="text-white text-5xl md:text-6xl font-black leading-[1.1] mb-6 translate-text" 
                         data-ro="Esența Spațiului tău prin Măiestrie Artizanală" 
@@ -204,7 +205,7 @@
         </section>
 
         <section id="request-link" class="py-20 px-6">
-            <div class="max-w-5xl mx-auto wood-gradient rounded-3xl p-12 md:p-20 text-center text-white relative overflow-hidden shadow-2xl">
+            <div class="max-w-5xl mx-auto bg-primary rounded-3xl p-12 md:p-20 text-center text-white relative overflow-hidden shadow-2xl">
                 <div class="absolute -top-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
                 <div class="relative z-10">
                     <h2 class="text-3xl md:text-5xl font-black mb-8 translate-text" data-ro="Ești gata să începi următorul proiect?" data-en="Ready to start your next project?">Ești gata să începi următorul proiect?</h2>
@@ -228,9 +229,9 @@
                         <h2 class="text-lg font-semibold tracking-tight text-white">Grupul Tu Casa</h2>
                     </div>
                     <p class="text-sm leading-relaxed translate-text"
-                       data-ro="Excelență în renovări arhitecturale și pardoseli din lemn de înaltă calitate. Transformăm viziunile în realitate din 1994."
-                       data-en="Excellence in architectural renovation and high-end timber flooring. Transforming London's finest residences since 1994.">
-                        Excelență în renovări arhitecturale și pardoseli din lemn de înaltă calitate. Transformăm viziunile în realitate din 1994.
+                       data-ro="Excelență în renovări arhitecturale și pardoseli din lemn de înaltă calitate. Transformăm viziunile în realitate din 2012."
+                       data-en="Excellence in architectural renovation and high-end timber flooring. Transforming London's finest residences since 2012.">
+                        Excelență în renovări arhitecturale și pardoseli din lemn de înaltă calitate. Transformăm viziunile în realitate din 2012.
                     </p>
                 </div>
                 <div>

@@ -5,8 +5,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Gallery | Grupul Tu Casa</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script id="tailwind-config">
         tailwind.config = {
@@ -14,15 +13,14 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#2f605f",
-                        "accent-terracotta": "#B97C5D",
-                        "background-light": "#f9f9f6",
-                        "background-dark": "#1c1f21",
-                        "charcoal": "#212121",
-                        "stone": "#595959"
+                        "primary": "#bd6628",
+                        "background-light": "#f8f7f7",
+                        "background-dark": "#18181b",
+                        "charcoal": "#1a140f",
                     },
                     fontFamily: {
-                        "display": ["Manrope", "sans-serif"]
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
                     },
                     borderRadius: {
                         "DEFAULT": "0.25rem",
@@ -35,9 +33,11 @@
         }
     </script>
     <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
+        body { font-family: 'Noto Sans', sans-serif; }
+        h1, h2, h3, .font-display { font-family: 'Noto Serif', serif; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #bd6628; border-radius: 3px; }
         .gallery-masonry {
             columns: 1;
             gap: 1.5rem;
@@ -55,7 +55,7 @@
         .project-overlay {
             opacity: 0;
             transition: opacity 0.4s ease-in-out;
-            background: linear-gradient(0deg, rgba(47, 96, 95, 0.95) 0%, rgba(47, 96, 95, 0.4) 100%);
+            background: linear-gradient(0deg, rgba(189,102,40,0.95) 0%, rgba(189,102,40,0.4) 100%);
         }
         
         .project-card:hover .project-overlay {
@@ -78,7 +78,7 @@
                     <nav class="hidden md:flex items-center gap-8">
                         <a class="text-sm font-semibold hover:text-primary transition-colors translate-text" href="index.html" data-ro="Acasă" data-en="Home">Home</a>
                         <a class="text-sm font-semibold hover:text-primary transition-colors translate-text" href="gallery.html" data-ro="Portofoliu" data-en="Portfolio">Portfolio</a>
-                        <a class="text-sm font-medium opacity-70 hover:opacity-100 transition-opacity translate-text" href="contact.html" data-ro="Contact" data-en="Contact">Contact</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors translate-text" href="contact.html" data-ro="Contact" data-en="Contact">Contact</a>
                     </nav>
 
                     <button id="lang-switch" class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors border border-primary/20 px-3 py-1.5 rounded-full">
@@ -171,7 +171,7 @@
         </div>
     </main>
 
-    <footer id="contact" class="bg-charcoal dark:bg-black text-gray-400 py-20 px-6 mt-20">
+    <footer id="contact" class="bg-charcoal dark:bg-black text-gray-400 py-20 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                 <div class="col-span-1 md:col-span-1">
@@ -180,26 +180,26 @@
                         <h2 class="text-lg font-semibold tracking-tight text-white">Grupul Tu Casa</h2>
                     </div>
                     <p class="text-sm leading-relaxed translate-text"
-                       data-ro="Excelență în renovări arhitecturale și pardoseli din lemn de înaltă calitate. Transformăm viziunile în realitate din 1994."
-                       data-en="Excellence in architectural renovation and high-end timber flooring. Transforming London's finest residences since 1994.">
-                        Excellence in architectural renovation and high-end timber flooring. Transforming London's finest residences since 1994.
+                       data-ro="Excelență în renovări arhitecturale și pardoseli din lemn de înaltă calitate. Transformăm viziunile în realitate din 2012."
+                       data-en="Excellence in architectural renovation and high-end timber flooring. Transforming London's finest residences since 2012.">
+                        Excelență în renovări arhitecturale și pardoseli din lemn de înaltă calitate. Transformăm viziunile în realitate din 2012.
                     </p>
                 </div>
                 <div>
-                    <h5 class="text-white font-bold mb-6 translate-text" data-ro="Servicii" data-en="Services">Services</h5>
+                    <h5 class="text-white font-bold mb-6 translate-text" data-ro="Servicii" data-en="Services">Servicii</h5>
                     <ul class="space-y-4 text-sm">
-                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Renovări Complete" data-en="Full Home Renovation">Full Home Renovation</a></li>
-                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Parchet Masiv" data-en="Parquet Flooring">Parquet Flooring</a></li>
-                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Tâmplărie Custom" data-en="Custom Millwork">Custom Millwork</a></li>
-                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Montaj Bucătării" data-en="Kitchen Fitting">Kitchen Fitting</a></li>
+                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Renovări Complete" data-en="Full Home Renovation">Renovări Complete</a></li>
+                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Parchet Masiv" data-en="Parquet Flooring">Parchet Masiv</a></li>
+                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Tâmplărie Custom" data-en="Custom Millwork">Tâmplărie Custom</a></li>
+                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Montaj Bucătării" data-en="Kitchen Fitting">Montaj Bucătării</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h5 class="text-white font-bold mb-6 translate-text" data-ro="Companie" data-en="Company">Company</h5>
+                    <h5 class="text-white font-bold mb-6 translate-text" data-ro="Companie" data-en="Company">Companie</h5>
                     <ul class="space-y-4 text-sm">
-                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Povestea Noastră" data-en="Our Story">Our Story</a></li>
-                        <li><a class="hover:text-primary transition-colors translate-text" href="gallery.html" data-ro="Galerie" data-en="Gallery">Gallery</a></li>
-                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Cariere" data-en="Careers">Careers</a></li>
+                        <li><button class="hover:text-primary transition-colors translate-text text-left" onclick="openStory()" data-ro="Povestea Noastră" data-en="Our Story">Povestea Noastră</button></li>
+                        <li><a class="hover:text-primary transition-colors translate-text" href="gallery.html" data-ro="Galerie" data-en="Gallery">Galerie</a></li>
+                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Cariere" data-en="Careers">Cariere</a></li>
                         <li><a class="hover:text-primary transition-colors translate-text" href="contact.html" data-ro="Contact" data-en="Contact">Contact</a></li>
                     </ul>
                 </div>
@@ -232,6 +232,96 @@
             </div>
         </div>
     </footer>
+
+    <div id="story-modal" class="fixed inset-0 z-[100] hidden">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity opacity-0" id="story-backdrop" onclick="closeStory()"></div>
+    
+    <div id="story-panel" class="absolute bottom-0 left-0 w-full bg-white dark:bg-[#151718] rounded-t-3xl shadow-2xl transform transition-transform duration-500 translate-y-full flex flex-col max-h-[85vh] lg:max-h-[70vh]">
+        
+        <div class="p-6 border-b border-gray-100 dark:border-gray-800 flex justify-between items-center sticky top-0 bg-white dark:bg-[#151718] z-10 rounded-t-3xl">
+            <h2 class="text-2xl font-black text-charcoal dark:text-white translate-text" 
+                data-ro="Cine suntem: Grupul Tu Casa" 
+                data-en="Who We Are: Grupul Tu Casa">
+                Cine suntem: Grupul Tu Casa
+            </h2>
+            <button onclick="closeStory()" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors text-charcoal dark:text-white">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+
+        <div class="p-6 lg:p-10 overflow-y-auto space-y-8 text-stone dark:text-gray-300 leading-relaxed">
+            
+            <div>
+                <p class="mb-4 translate-text"
+                   data-ro="Povestea noastră a început acum 12 ani în Spania, unde am învățat ce înseamnă rigoarea în construcții și cum să gestionăm corect un șantier, de la clădiri mari până la spații industriale."
+                   data-en="Our story began 12 years ago in Spain, where we learned what rigor in construction truly means and how to properly manage a site, from large buildings to industrial spaces.">
+                   Povestea noastră a început acum 12 ani în Spania, unde am învățat ce înseamnă rigoarea în construcții și cum să gestionăm corect un șantier, de la clădiri mari până la spații industriale.
+                </p>
+                <p class="translate-text"
+                   data-ro="Din 2022, am adus această experiență acasă, în România. Ne-am specializat pe ceea ce știm să facem cel mai bine: să transformăm locuințele în spații moderne și confortabile prin montaj de parchet, montaj de mobilă și renovări generale."
+                   data-en="Since 2022, we brought this experience home to Romania. We specialized in what we do best: transforming homes into modern, comfortable spaces through parquet installation, furniture assembly, and general renovations.">
+                   Din 2022, am adus această experiență acasă, în România. Ne-am specializat pe ceea ce știm să facem cel mai bine: să transformăm locuințele în spații moderne și confortabile prin montaj de parchet, montaj de mobilă și renovări generale.
+                </p>
+            </div>
+
+            <div class="bg-primary/5 p-6 rounded-xl border border-primary/10">
+                <h3 class="text-xl font-bold text-primary mb-3 translate-text" data-ro="Echipa și Calitatea" data-en="Team & Quality">Echipa și Calitatea</h3>
+                <p class="translate-text"
+                   data-ro="Suntem o echipă de oameni serioși care își respectă meseria. După un deceniu de muncă în străinătate, am învățat că cel mai important lucru este să lucrezi curat și să te ții de cuvânt. Pentru noi, calitatea nu este un lux, ci modul normal de a lucra."
+                   data-en="We are a team of serious people who respect their craft. After a decade of working abroad, we learned that the most important thing is to work cleanly and keep your word. For us, quality is not a luxury, but the standard way of working.">
+                   Suntem o echipă de oameni serioși care își respectă meseria. După un deceniu de muncă în străinătate, am învățat că cel mai important lucru este să lucrezi curat și să te ții de cuvânt. Pentru noi, calitatea nu este un lux, ci modul normal de a lucra.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-charcoal dark:text-white mb-4 translate-text" 
+                    data-ro="Planuri de viitor: Construim mai mult împreună" 
+                    data-en="Future Plans: Building More Together">
+                    Planuri de viitor: Construim mai mult împreună
+                </h3>
+                <p class="mb-4 translate-text"
+                   data-ro="Nu ne oprim aici. Ne dorim să creștem natural și să devenim un punct de referință în România pentru renovări de calitate. Planurile noastre includ:"
+                   data-en="We don't stop here. We aim to grow naturally and become a benchmark in Romania for quality renovations. Our plans include:">
+                   Nu ne oprim aici. Ne dorim să creștem natural și să devenim un punct de referință în România pentru renovări de calitate. Planurile noastre includ:
+                </p>
+                <ul class="list-none space-y-3">
+                    <li class="flex gap-3">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        <span class="translate-text"
+                              data-ro="<strong>Extinderea echipei:</strong> Căutăm constant oameni pasionați pentru a putea prelua proiecte tot mai mari."
+                              data-en="<strong>Team expansion:</strong> We are constantly looking for passionate people to take on larger projects.">
+                              <strong>Extinderea echipei:</strong> Căutăm constant oameni pasionați pentru a putea prelua proiecte tot mai mari.
+                        </span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        <span class="translate-text"
+                              data-ro="<strong>Dotări moderne:</strong> Investim în scule și tehnologii noi pentru ca munca noastră să fie tot mai rapidă și mai precisă."
+                              data-en="<strong>Modern equipment:</strong> We invest in new tools and technologies to make our work faster and more precise.">
+                              <strong>Dotări moderne:</strong> Investim în scule și tehnologii noi pentru ca munca noastră să fie tot mai rapidă și mai precisă.
+                        </span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        <span class="translate-text"
+                              data-ro="<strong>Parteneriate de durată:</strong> Vrem să fim firma la care apelezi cu încredere și a doua oară."
+                              data-en="<strong>Lasting partnerships:</strong> We want to be the company you call with confidence a second time.">
+                              <strong>Parteneriate de durată:</strong> Vrem să fim firma la care apelezi cu încredere și a doua oară.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="text-center pt-6 border-t border-gray-100 dark:border-gray-800">
+                <p class="text-lg font-bold italic text-primary translate-text"
+                   data-ro="Pe scurt, aducem experiența din Spania și o dezvoltăm aici, pentru casa ta."
+                   data-en="In short, we bring the experience from Spain and develop it here, for your home.">
+                   Pe scurt, aducem experiența din Spania și o dezvoltăm aici, pentru casa ta.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
     <div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 hidden flex items-center justify-center p-4 backdrop-blur-sm" onclick="closeLightbox()">
         <div class="relative max-w-5xl w-full h-full flex items-center justify-center">

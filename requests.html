@@ -231,9 +231,9 @@
                         <h2 class="text-lg font-semibold tracking-tight text-white">Grupul Tu Casa</h2>
                     </div>
                     <p class="text-sm leading-relaxed translate-text"
-                       data-ro="Excelență în renovări arhitecturale și pardoseli din lemn de înaltă calitate. Transformăm viziunile în realitate din 1994."
-                       data-en="Excellence in architectural renovation and high-end timber flooring. Transforming London's finest residences since 1994.">
-                        Excelență în renovări arhitecturale și pardoseli din lemn de înaltă calitate. Transformăm viziunile în realitate din 1994.
+                       data-ro="Excelență în renovări arhitecturale și pardoseli din lemn de înaltă calitate. Transformăm viziunile în realitate din 2012."
+                       data-en="Excellence in architectural renovation and high-end timber flooring. Transforming London's finest residences since 2012.">
+                        Excelență în renovări arhitecturale și pardoseli din lemn de înaltă calitate. Transformăm viziunile în realitate din 2012.
                     </p>
                 </div>
                 <div>
@@ -248,7 +248,7 @@
                 <div>
                     <h5 class="text-white font-bold mb-6 translate-text" data-ro="Companie" data-en="Company">Companie</h5>
                     <ul class="space-y-4 text-sm">
-                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Povestea Noastră" data-en="Our Story">Povestea Noastră</a></li>
+                        <li><button class="hover:text-primary transition-colors translate-text text-left" onclick="openStory()" data-ro="Povestea Noastră" data-en="Our Story">Povestea Noastră</button></li>
                         <li><a class="hover:text-primary transition-colors translate-text" href="gallery.html" data-ro="Galerie" data-en="Gallery">Galerie</a></li>
                         <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Cariere" data-en="Careers">Cariere</a></li>
                         <li><a class="hover:text-primary transition-colors translate-text" href="contact.html" data-ro="Contact" data-en="Contact">Contact</a></li>
@@ -266,12 +266,8 @@
                             <span><a href="tel:+40768117811" class="hover:text-white transition-colors">+40 (768) 117 811</a></span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-sm text-primary">phone</span>
-                            <span><a href="tel:+40775174342" class="hover:text-white transition-colors">+40 (775) 174 342</a></span>
-                        </li>
-                        <li class="flex items-center gap-3">
                             <span class="material-symbols-outlined text-sm text-primary">mail</span>
-                            <span><a href="mailto:radu@grupultucasa.net" class="hover:text-white transition-colors">radu@grupultucasa.net</a></span>
+                            <span><a href="mailto:office@grupultucasa.net" class="hover:text-white transition-colors">office@grupultucasa.net</a></span>
                         </li>
                     </ul>
                 </div>
@@ -287,6 +283,96 @@
             </div>
         </div>
     </footer>
+
+    <div id="story-modal" class="fixed inset-0 z-[100] hidden">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity opacity-0" id="story-backdrop" onclick="closeStory()"></div>
+    
+    <div id="story-panel" class="absolute bottom-0 left-0 w-full bg-white dark:bg-[#151718] rounded-t-3xl shadow-2xl transform transition-transform duration-500 translate-y-full flex flex-col max-h-[85vh] lg:max-h-[70vh]">
+        
+        <div class="p-6 border-b border-gray-100 dark:border-gray-800 flex justify-between items-center sticky top-0 bg-white dark:bg-[#151718] z-10 rounded-t-3xl">
+            <h2 class="text-2xl font-black text-charcoal dark:text-white translate-text" 
+                data-ro="Cine suntem: Grupul Tu Casa" 
+                data-en="Who We Are: Grupul Tu Casa">
+                Cine suntem: Grupul Tu Casa
+            </h2>
+            <button onclick="closeStory()" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors text-charcoal dark:text-white">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+
+        <div class="p-6 lg:p-10 overflow-y-auto space-y-8 text-stone dark:text-gray-300 leading-relaxed">
+            
+            <div>
+                <p class="mb-4 translate-text"
+                   data-ro="Povestea noastră a început acum 12 ani în Spania, unde am învățat ce înseamnă rigoarea în construcții și cum să gestionăm corect un șantier, de la clădiri mari până la spații industriale."
+                   data-en="Our story began 12 years ago in Spain, where we learned what rigor in construction truly means and how to properly manage a site, from large buildings to industrial spaces.">
+                   Povestea noastră a început acum 12 ani în Spania, unde am învățat ce înseamnă rigoarea în construcții și cum să gestionăm corect un șantier, de la clădiri mari până la spații industriale.
+                </p>
+                <p class="translate-text"
+                   data-ro="Din 2022, am adus această experiență acasă, în România. Ne-am specializat pe ceea ce știm să facem cel mai bine: să transformăm locuințele în spații moderne și confortabile prin montaj de parchet, montaj de mobilă și renovări generale."
+                   data-en="Since 2022, we brought this experience home to Romania. We specialized in what we do best: transforming homes into modern, comfortable spaces through parquet installation, furniture assembly, and general renovations.">
+                   Din 2022, am adus această experiență acasă, în România. Ne-am specializat pe ceea ce știm să facem cel mai bine: să transformăm locuințele în spații moderne și confortabile prin montaj de parchet, montaj de mobilă și renovări generale.
+                </p>
+            </div>
+
+            <div class="bg-primary/5 p-6 rounded-xl border border-primary/10">
+                <h3 class="text-xl font-bold text-primary mb-3 translate-text" data-ro="Echipa și Calitatea" data-en="Team & Quality">Echipa și Calitatea</h3>
+                <p class="translate-text"
+                   data-ro="Suntem o echipă de oameni serioși care își respectă meseria. După un deceniu de muncă în străinătate, am învățat că cel mai important lucru este să lucrezi curat și să te ții de cuvânt. Pentru noi, calitatea nu este un lux, ci modul normal de a lucra."
+                   data-en="We are a team of serious people who respect their craft. After a decade of working abroad, we learned that the most important thing is to work cleanly and keep your word. For us, quality is not a luxury, but the standard way of working.">
+                   Suntem o echipă de oameni serioși care își respectă meseria. După un deceniu de muncă în străinătate, am învățat că cel mai important lucru este să lucrezi curat și să te ții de cuvânt. Pentru noi, calitatea nu este un lux, ci modul normal de a lucra.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-charcoal dark:text-white mb-4 translate-text" 
+                    data-ro="Planuri de viitor: Construim mai mult împreună" 
+                    data-en="Future Plans: Building More Together">
+                    Planuri de viitor: Construim mai mult împreună
+                </h3>
+                <p class="mb-4 translate-text"
+                   data-ro="Nu ne oprim aici. Ne dorim să creștem natural și să devenim un punct de referință în România pentru renovări de calitate. Planurile noastre includ:"
+                   data-en="We don't stop here. We aim to grow naturally and become a benchmark in Romania for quality renovations. Our plans include:">
+                   Nu ne oprim aici. Ne dorim să creștem natural și să devenim un punct de referință în România pentru renovări de calitate. Planurile noastre includ:
+                </p>
+                <ul class="list-none space-y-3">
+                    <li class="flex gap-3">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        <span class="translate-text"
+                              data-ro="<strong>Extinderea echipei:</strong> Căutăm constant oameni pasionați pentru a putea prelua proiecte tot mai mari."
+                              data-en="<strong>Team expansion:</strong> We are constantly looking for passionate people to take on larger projects.">
+                              <strong>Extinderea echipei:</strong> Căutăm constant oameni pasionați pentru a putea prelua proiecte tot mai mari.
+                        </span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        <span class="translate-text"
+                              data-ro="<strong>Dotări moderne:</strong> Investim în scule și tehnologii noi pentru ca munca noastră să fie tot mai rapidă și mai precisă."
+                              data-en="<strong>Modern equipment:</strong> We invest in new tools and technologies to make our work faster and more precise.">
+                              <strong>Dotări moderne:</strong> Investim în scule și tehnologii noi pentru ca munca noastră să fie tot mai rapidă și mai precisă.
+                        </span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="material-symbols-outlined text-primary">check_circle</span>
+                        <span class="translate-text"
+                              data-ro="<strong>Parteneriate de durată:</strong> Vrem să fim firma la care apelezi cu încredere și a doua oară."
+                              data-en="<strong>Lasting partnerships:</strong> We want to be the company you call with confidence a second time.">
+                              <strong>Parteneriate de durată:</strong> Vrem să fim firma la care apelezi cu încredere și a doua oară.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="text-center pt-6 border-t border-gray-100 dark:border-gray-800">
+                <p class="text-lg font-bold italic text-primary translate-text"
+                   data-ro="Pe scurt, aducem experiența din Spania și o dezvoltăm aici, pentru casa ta."
+                   data-en="In short, we bring the experience from Spain and develop it here, for your home.">
+                   Pe scurt, aducem experiența din Spania și o dezvoltăm aici, pentru casa ta.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
     <script src="script.js"></script>
 </body>

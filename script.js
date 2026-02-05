@@ -7,12 +7,11 @@ function openStory() {
 
     if (modal && backdrop && panel) {
         modal.classList.remove('hidden');
-        // Mic delay pentru a permite animația CSS
         setTimeout(() => {
             backdrop.classList.remove('opacity-0');
             panel.classList.remove('translate-y-full');
         }, 10);
-        document.body.style.overflow = 'hidden'; // Blochează scroll-ul paginii
+        document.body.style.overflow = 'hidden'; 
     }
 }
 
@@ -22,14 +21,12 @@ function closeStory() {
     const panel = document.getElementById('story-panel');
 
     if (modal && backdrop && panel) {
-        // Începe animația de ieșire
         backdrop.classList.add('opacity-0');
         panel.classList.add('translate-y-full');
         
-        // Așteaptă terminarea animației (500ms) înainte de a ascunde div-ul
         setTimeout(() => {
             modal.classList.add('hidden');
-            document.body.style.overflow = 'auto'; // Deblochează scroll-ul
+            document.body.style.overflow = 'auto'; 
         }, 500);
     }
 }
@@ -150,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', function(event) {
         if (event.key === "Escape") {
             closeLightbox();
-            closeStory(); // Închide și fereastra "Our Story" cu ESC
+            closeStory();
         }
     });
 
