@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Grupul Tu Casa | Imobiliare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#bd6628",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans', sans-serif; background-color: #ffffff; color: #000000; }
+        .font-display { font-family: 'Noto Serif', serif; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <header class="w-full py-6 px-6 border-b border-gray-100">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                <img src="TuCasaLogo.png" alt="Grupul Tu Casa" class="h-12 w-auto" />
+                <span class="text-xl font-extrabold tracking-tight font-display">Grupul Tu Casa</span>
+            </a>
+            <a href="index.html" class="text-sm font-bold text-gray-500 hover:text-primary transition-colors uppercase tracking-wider">
+                &larr; Înapoi la portal
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center p-6">
+        <div class="max-w-3xl w-full text-center">
+            
+            <h1 class="font-display text-3xl md:text-4xl font-black mb-8">Departamentul Imobiliar</h1>
+            
+            <p class="text-lg md:text-xl leading-relaxed mb-12">
+                Suntem aici pentru a vă ajuta în rezolvarea necesităților dumneavoastră din punct de vedere imobiliar și vă mulțumim pentru încrederea acordată. De moment lucrăm la pagina web, dar vă invităm să ne contactați telefonic sau prin e-mail pentru a vă putea oferi tot pachetul nostru de servicii.
+            </p>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-8 max-w-sm mx-auto shadow-sm">
+                <p class="font-bold text-xl mb-6">Contact: Radu Pușcaș</p>
+                
+                <div class="flex flex-col gap-4 text-left mx-auto w-fit">
+                    <a href="tel:+40768117811" class="flex items-center gap-3 text-lg hover:text-primary transition-colors">
+                        <span class="text-xl">📲</span> 
+                        <span class="font-medium">+40 768 117 811</span>
+                    </a>
+                    <a href="mailto:radu@grupultucasa.net" class="flex items-center gap-3 text-lg hover:text-primary transition-colors">
+                        <span class="text-xl">📧</span> 
+                        <span class="font-medium">radu@grupultucasa.net</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
