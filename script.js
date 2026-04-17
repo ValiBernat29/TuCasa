@@ -51,6 +51,43 @@ function closeLightbox() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- 1. Tab Functionality ---
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    if (tabBtns.length > 0 && tabContents.length > 0) {
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.getAttribute('data-target');
+
+                // Reset all buttons to inactive state
+                tabBtns.forEach(b => {
+                    b.classList.remove('bg-primary', 'text-white');
+                    b.classList.add('bg-gray-200', 'dark:bg-gray-800', 'text-charcoal', 'dark:text-gray-300', 'hover:bg-gray-300', 'dark:hover:bg-gray-700');
+                });
+
+                // Set clicked button to active state
+                btn.classList.remove('bg-gray-200', 'dark:bg-gray-800', 'text-charcoal', 'dark:text-gray-300', 'hover:bg-gray-300', 'dark:hover:bg-gray-700');
+                btn.classList.add('bg-primary', 'text-white');
+
+                // Hide all tab content
+                tabContents.forEach(content => {
+                    content.classList.remove('block');
+                    content.classList.add('hidden');
+                });
+                
+                // Show the target tab content
+                const targetContent = document.getElementById(targetId);
+                if (targetContent) {
+                    targetContent.classList.remove('hidden');
+                    targetContent.classList.add('block');
+                }
+            });
+        });
+    }
+
+    // --- 2. Language Switcher ---
     const langBtn = document.getElementById('lang-switch');
     const langText = document.getElementById('lang-text');
     const elementsToTranslate = document.querySelectorAll('.translate-text');
@@ -86,6 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- 3. Mobile Menu ---
     const menuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = menuBtn ? menuBtn.querySelector('.material-symbols-outlined') : null;
@@ -99,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- 4. Smooth Scrolling ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
@@ -122,6 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- 5. Scroll Animations (Intersection Observer) ---
     const observerOptions = {
         threshold: 0.1, 
         rootMargin: '0px 0px -50px 0px' 
@@ -144,6 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    // --- 6. Global Event Listeners ---
     document.addEventListener('keydown', function(event) {
         if (event.key === "Escape") {
             closeLightbox();
@@ -151,6 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- 7. Form Date Constraints ---
     const dateInput = document.getElementById('consultation-date');
     if (dateInput) {
         const today = new Date().toISOString().split('T')[0];

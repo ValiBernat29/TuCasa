@@ -67,7 +67,6 @@
     
     <header class="sticky top-0 z-50 w-full border-b border-solid border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 md:px-20 lg:px-40 py-4">
         <div class="mx-auto flex max-w-[1280px] items-center justify-between">
-            
             <div class="flex items-center gap-10 w-full justify-between">
                 <a href="index.html" class="flex items-center gap-4 shrink-0">
                     <img src="TuCasaLogo.png" alt="Grupul Tu Casa" class="h-12 w-auto object-contain" />
@@ -76,7 +75,7 @@
 
                 <div class="flex items-center gap-8">
                     <nav class="hidden md:flex items-center gap-8">
-                        <a class="text-sm font-semibold hover:text-primary transition-colors translate-text" href="index.html" data-ro="Acasă" data-en="Home">Home</a>
+                        <a class="text-sm font-semibold hover:text-primary transition-colors translate-text" href="renovari.html" data-ro="Acasă" data-en="Home">Home</a>
                         <a class="text-sm font-semibold hover:text-primary transition-colors translate-text" href="gallery.html" data-ro="Portofoliu" data-en="Portfolio">Portfolio</a>
                         <a class="text-sm font-medium hover:text-primary transition-colors translate-text" href="contact.html" data-ro="Contact" data-en="Contact">Contact</a>
                     </nav>
@@ -87,7 +86,6 @@
                     </button>
 
                     <a href="requests.html" class="hidden md:block bg-primary text-white py-2.5 px-5 rounded-lg font-bold text-sm transition-all transform active:scale-95 translate-text" data-ro="Solicită Consultanță" data-en="Request Consultation">Solicită Consultanță</a>
-
                 </div>
             </div>
         </div>
@@ -120,55 +118,373 @@
             </div>
         </div>
 
-        <div class="flex flex-wrap gap-3 mb-12 items-center">
-            <button class="px-5 py-2 rounded-full bg-primary text-white text-sm font-bold transition-all translate-text" data-ro="Toate Proiectele" data-en="All Projects">All Projects</button>
+        <!-- Tab Buttons -->
+        <div class="flex flex-wrap gap-3 mb-8 items-center border-b border-gray-200 dark:border-gray-800 pb-4">
+            <button class="tab-btn px-5 py-2 rounded-full bg-primary text-white text-sm font-bold transition-all translate-text" data-target="tab-original" data-ro="Lucrări interioare" data-en="Interior works">
+                Lucrări interioare
+            </button>
+            <button class="tab-btn px-5 py-2 rounded-full bg-gray-200 dark:bg-gray-800 text-charcoal dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 text-sm font-bold transition-all translate-text" data-target="tab-gal" data-ro="Cabană de lemn" data-en="Wooden cabin">
+                Cabane de lemn
+            </button>
+            <button class="tab-btn px-5 py-2 rounded-full bg-gray-200 dark:bg-gray-800 text-charcoal dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 text-sm font-bold transition-all translate-text" data-target="tab-gl" data-ro="Terase-Pergole" data-en="Pergolas-Terraces & Decks">
+                Terase-Pergole
+            </button>
         </div>
 
-        <div class="gallery-masonry">
-            
-            <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie1.jpg')">
-                <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie1.jpg');"></div>
-                <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+        <!-- Tab: Original Collection (pozaGalerie1–6) -->
+        <div id="tab-original" class="tab-content block">
+            <div class="gallery-masonry">
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie1.jpg')">
+                    <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie1.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie2.jpg')">
+                    <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie2.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie3.jpg')">
+                    <div class="aspect-[1/1] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie3.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie4.jpg')">
+                    <div class="aspect-[4/3] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie4.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie5.jpg')">
+                    <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie5.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie6.jpg')">
+                    <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie6.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
                 </div>
             </div>
-
-            <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie2.jpg')">
-                <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie2.jpg');"></div>
-                <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
-                </div>
-            </div>
-
-            <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie3.jpg')">
-                <div class="aspect-[1/1] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie3.jpg');"></div>
-                <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
-                </div>
-            </div>
-
-            <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie4.jpg')">
-                <div class="aspect-[4/3] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie4.jpg');"></div>
-                <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
-                </div>
-            </div>
-
-            <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie5.jpg')">
-                <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie5.jpg');"></div>
-                <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
-                </div>
-            </div>
-
-            <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('pozaGalerie6.jpg')">
-                <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('pozaGalerie6.jpg');"></div>
-                <div class="project-overlay absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
-                </div>
-            </div>
-
         </div>
+
+        <!-- Tab: Collection 2 (gal1–gal24) -->
+        <div id="tab-gal" class="tab-content hidden">
+            <div class="gallery-masonry">
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal1.jpg')">
+                    <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal1.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal2.jpg')">
+                    <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal2.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal3.jpg')">
+                    <div class="aspect-[1/1] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal3.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal4.jpg')">
+                    <div class="aspect-[4/3] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal4.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal5.jpg')">
+                    <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal5.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal6.jpg')">
+                    <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal6.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal7.jpg')">
+                    <div class="aspect-[1/1] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal7.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal8.jpg')">
+                    <div class="aspect-[4/3] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal8.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal9.jpg')">
+                    <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal9.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal10.jpg')">
+                    <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal10.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal11.jpg')">
+                    <div class="aspect-[1/1] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal11.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal12.jpg')">
+                    <div class="aspect-[4/3] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal12.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal13.jpg')">
+                    <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal13.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal14.jpg')">
+                    <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal14.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal15.jpg')">
+                    <div class="aspect-[1/1] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal15.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal16.jpg')">
+                    <div class="aspect-[4/3] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal16.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal17.jpg')">
+                    <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal17.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal18.jpg')">
+                    <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal18.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal19.jpg')">
+                    <div class="aspect-[1/1] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal19.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal20.jpg')">
+                    <div class="aspect-[4/3] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal20.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal21.jpg')">
+                    <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal21.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal22.jpg')">
+                    <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal22.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal23.jpg')">
+                    <div class="aspect-[1/1] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal23.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('galFolder/gal24.jpg')">
+                    <div class="aspect-[4/3] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('galFolder/gal24.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab: Collection 3 (gl1–gl26) -->
+        <div id="tab-gl" class="tab-content hidden">
+            <div class="gallery-masonry">
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl1.jpg')">
+                    <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl1.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl2.jpg')">
+                    <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl2.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl3.jpg')">
+                    <div class="aspect-[1/1] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl3.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl4.jpg')">
+                    <div class="aspect-[4/3] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl4.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl5.jpg')">
+                    <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl5.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl6.jpg')">
+                    <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl6.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl7.jpg')">
+                    <div class="aspect-[1/1] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl7.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl8.jpg')">
+                    <div class="aspect-[4/3] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl8.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl9.jpg')">
+                    <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl9.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl10.jpg')">
+                    <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl10.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl11.jpg')">
+                    <div class="aspect-[1/1] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl11.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl12.jpg')">
+                    <div class="aspect-[4/3] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl12.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl13.jpg')">
+                    <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl13.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl14.jpg')">
+                    <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl14.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl15.jpg')">
+                    <div class="aspect-[1/1] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl15.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl16.jpg')">
+                    <div class="aspect-[4/3] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl16.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl17.jpg')">
+                    <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl17.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl18.jpg')">
+                    <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl18.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl19.jpg')">
+                    <div class="aspect-[1/1] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl19.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl20.jpg')">
+                    <div class="aspect-[4/3] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl20.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl21.jpg')">
+                    <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl21.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl22.jpg')">
+                    <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl22.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl23.jpg')">
+                    <div class="aspect-[1/1] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl23.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl24.jpg')">
+                    <div class="aspect-[4/3] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl24.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl25.jpg')">
+                    <div class="aspect-[3/4] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl25.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+                <div class="project-card rounded-xl group shadow-sm border border-black/5 dark:border-white/5 overflow-hidden cursor-pointer relative" onclick="openLightbox('glFolder/gl26.jpg')">
+                    <div class="aspect-[4/5] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('glFolder/gl26.jpg');"></div>
+                    <div class="project-overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-5xl drop-shadow-lg">open_in_full</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer id="contact" class="bg-charcoal dark:bg-black text-gray-400 py-20 px-6">
@@ -234,94 +550,87 @@
     </footer>
 
     <div id="story-modal" class="fixed inset-0 z-[100] hidden">
-    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity opacity-0" id="story-backdrop" onclick="closeStory()"></div>
-    
-    <div id="story-panel" class="absolute bottom-0 left-0 w-full bg-white dark:bg-[#151718] rounded-t-3xl shadow-2xl transform transition-transform duration-500 translate-y-full flex flex-col max-h-[85vh] lg:max-h-[70vh]">
-        
-        <div class="p-6 border-b border-gray-100 dark:border-gray-800 flex justify-between items-center sticky top-0 bg-white dark:bg-[#151718] z-10 rounded-t-3xl">
-            <h2 class="text-2xl font-black text-charcoal dark:text-white translate-text" 
-                data-ro="Cine suntem: Grupul Tu Casa" 
-                data-en="Who We Are: Grupul Tu Casa">
-                Cine suntem: Grupul Tu Casa
-            </h2>
-            <button onclick="closeStory()" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors text-charcoal dark:text-white">
-                <span class="material-symbols-outlined">close</span>
-            </button>
-        </div>
-
-        <div class="p-6 lg:p-10 overflow-y-auto space-y-8 text-stone dark:text-gray-300 leading-relaxed">
-            
-            <div>
-                <p class="mb-4 translate-text"
-                   data-ro="Povestea noastră a început acum 12 ani în Spania, unde am învățat ce înseamnă rigoarea în construcții și cum să gestionăm corect un șantier, de la clădiri mari până la spații industriale."
-                   data-en="Our story began 12 years ago in Spain, where we learned what rigor in construction truly means and how to properly manage a site, from large buildings to industrial spaces.">
-                   Povestea noastră a început acum 12 ani în Spania, unde am învățat ce înseamnă rigoarea în construcții și cum să gestionăm corect un șantier, de la clădiri mari până la spații industriale.
-                </p>
-                <p class="translate-text"
-                   data-ro="Din 2022, am adus această experiență acasă, în România. Ne-am specializat pe ceea ce știm să facem cel mai bine: să transformăm locuințele în spații moderne și confortabile prin montaj de parchet, montaj de mobilă și renovări generale."
-                   data-en="Since 2022, we brought this experience home to Romania. We specialized in what we do best: transforming homes into modern, comfortable spaces through parquet installation, furniture assembly, and general renovations.">
-                   Din 2022, am adus această experiență acasă, în România. Ne-am specializat pe ceea ce știm să facem cel mai bine: să transformăm locuințele în spații moderne și confortabile prin montaj de parchet, montaj de mobilă și renovări generale.
-                </p>
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity opacity-0" id="story-backdrop" onclick="closeStory()"></div>
+        <div id="story-panel" class="absolute bottom-0 left-0 w-full bg-white dark:bg-[#151718] rounded-t-3xl shadow-2xl transform transition-transform duration-500 translate-y-full flex flex-col max-h-[85vh] lg:max-h-[70vh]">
+            <div class="p-6 border-b border-gray-100 dark:border-gray-800 flex justify-between items-center sticky top-0 bg-white dark:bg-[#151718] z-10 rounded-t-3xl">
+                <h2 class="text-2xl font-black text-charcoal dark:text-white translate-text" 
+                    data-ro="Cine suntem: Grupul Tu Casa" 
+                    data-en="Who We Are: Grupul Tu Casa">
+                    Cine suntem: Grupul Tu Casa
+                </h2>
+                <button onclick="closeStory()" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors text-charcoal dark:text-white">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
             </div>
-
-            <div class="bg-primary/5 p-6 rounded-xl border border-primary/10">
-                <h3 class="text-xl font-bold text-primary mb-3 translate-text" data-ro="Echipa și Calitatea" data-en="Team & Quality">Echipa și Calitatea</h3>
-                <p class="translate-text"
-                   data-ro="Suntem o echipă de oameni serioși care își respectă meseria. După un deceniu de muncă în străinătate, am învățat că cel mai important lucru este să lucrezi curat și să te ții de cuvânt. Pentru noi, calitatea nu este un lux, ci modul normal de a lucra."
-                   data-en="We are a team of serious people who respect their craft. After a decade of working abroad, we learned that the most important thing is to work cleanly and keep your word. For us, quality is not a luxury, but the standard way of working.">
-                   Suntem o echipă de oameni serioși care își respectă meseria. După un deceniu de muncă în străinătate, am învățat că cel mai important lucru este să lucrezi curat și să te ții de cuvânt. Pentru noi, calitatea nu este un lux, ci modul normal de a lucra.
-                </p>
-            </div>
-
-            <div>
-                <h3 class="text-xl font-bold text-charcoal dark:text-white mb-4 translate-text" 
-                    data-ro="Planuri de viitor: Construim mai mult împreună" 
-                    data-en="Future Plans: Building More Together">
-                    Planuri de viitor: Construim mai mult împreună
-                </h3>
-                <p class="mb-4 translate-text"
-                   data-ro="Nu ne oprim aici. Ne dorim să creștem natural și să devenim un punct de referință în România pentru renovări de calitate. Planurile noastre includ:"
-                   data-en="We don't stop here. We aim to grow naturally and become a benchmark in Romania for quality renovations. Our plans include:">
-                   Nu ne oprim aici. Ne dorim să creștem natural și să devenim un punct de referință în România pentru renovări de calitate. Planurile noastre includ:
-                </p>
-                <ul class="list-none space-y-3">
-                    <li class="flex gap-3">
-                        <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span class="translate-text"
-                              data-ro="<strong>Extinderea echipei:</strong> Căutăm constant oameni pasionați pentru a putea prelua proiecte tot mai mari."
-                              data-en="<strong>Team expansion:</strong> We are constantly looking for passionate people to take on larger projects.">
-                              <strong>Extinderea echipei:</strong> Căutăm constant oameni pasionați pentru a putea prelua proiecte tot mai mari.
-                        </span>
-                    </li>
-                    <li class="flex gap-3">
-                        <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span class="translate-text"
-                              data-ro="<strong>Dotări moderne:</strong> Investim în scule și tehnologii noi pentru ca munca noastră să fie tot mai rapidă și mai precisă."
-                              data-en="<strong>Modern equipment:</strong> We invest in new tools and technologies to make our work faster and more precise.">
-                              <strong>Dotări moderne:</strong> Investim în scule și tehnologii noi pentru ca munca noastră să fie tot mai rapidă și mai precisă.
-                        </span>
-                    </li>
-                    <li class="flex gap-3">
-                        <span class="material-symbols-outlined text-primary">check_circle</span>
-                        <span class="translate-text"
-                              data-ro="<strong>Parteneriate de durată:</strong> Vrem să fim firma la care apelezi cu încredere și a doua oară."
-                              data-en="<strong>Lasting partnerships:</strong> We want to be the company you call with confidence a second time.">
-                              <strong>Parteneriate de durată:</strong> Vrem să fim firma la care apelezi cu încredere și a doua oară.
-                        </span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="text-center pt-6 border-t border-gray-100 dark:border-gray-800">
-                <p class="text-lg font-bold italic text-primary translate-text"
-                   data-ro="Pe scurt, aducem experiența din Spania și o dezvoltăm aici, pentru casa ta."
-                   data-en="In short, we bring the experience from Spain and develop it here, for your home.">
-                   Pe scurt, aducem experiența din Spania și o dezvoltăm aici, pentru casa ta.
-                </p>
+            <div class="p-6 lg:p-10 overflow-y-auto space-y-8 text-stone dark:text-gray-300 leading-relaxed">
+                <div>
+                    <p class="mb-4 translate-text"
+                       data-ro="Povestea noastră a început acum 12 ani în Spania, unde am învățat ce înseamnă rigoarea în construcții și cum să gestionăm corect un șantier, de la clădiri mari până la spații industriale."
+                       data-en="Our story began 12 years ago in Spain, where we learned what rigor in construction truly means and how to properly manage a site, from large buildings to industrial spaces.">
+                       Povestea noastră a început acum 12 ani în Spania, unde am învățat ce înseamnă rigoarea în construcții și cum să gestionăm corect un șantier, de la clădiri mari până la spații industriale.
+                    </p>
+                    <p class="translate-text"
+                       data-ro="Din 2022, am adus această experiență acasă, în România. Ne-am specializat pe ceea ce știm să facem cel mai bine: să transformăm locuințele în spații moderne și confortabile prin montaj de parchet, montaj de mobilă și renovări generale."
+                       data-en="Since 2022, we brought this experience home to Romania. We specialized in what we do best: transforming homes into modern, comfortable spaces through parquet installation, furniture assembly, and general renovations.">
+                       Din 2022, am adus această experiență acasă, în România. Ne-am specializat pe ceea ce știm să facem cel mai bine: să transformăm locuințele în spații moderne și confortabile prin montaj de parchet, montaj de mobilă și renovări generale.
+                    </p>
+                </div>
+                <div class="bg-primary/5 p-6 rounded-xl border border-primary/10">
+                    <h3 class="text-xl font-bold text-primary mb-3 translate-text" data-ro="Echipa și Calitatea" data-en="Team & Quality">Echipa și Calitatea</h3>
+                    <p class="translate-text"
+                       data-ro="Suntem o echipă de oameni serioși care își respectă meseria. După un deceniu de muncă în străinătate, am învățat că cel mai important lucru este să lucrezi curat și să te ții de cuvânt. Pentru noi, calitatea nu este un lux, ci modul normal de a lucra."
+                       data-en="We are a team of serious people who respect their craft. After a decade of working abroad, we learned that the most important thing is to work cleanly and keep your word. For us, quality is not a luxury, but the standard way of working.">
+                       Suntem o echipă de oameni serioși care își respectă meseria. După un deceniu de muncă în străinătate, am învățat că cel mai important lucru este să lucrezi curat și să te ții de cuvânt. Pentru noi, calitatea nu este un lux, ci modul normal de a lucra.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-charcoal dark:text-white mb-4 translate-text" 
+                        data-ro="Planuri de viitor: Construim mai mult împreună" 
+                        data-en="Future Plans: Building More Together">
+                        Planuri de viitor: Construim mai mult împreună
+                    </h3>
+                    <p class="mb-4 translate-text"
+                       data-ro="Nu ne oprim aici. Ne dorim să creștem natural și să devenim un punct de referință în România pentru renovări de calitate. Planurile noastre includ:"
+                       data-en="We don't stop here. We aim to grow naturally and become a benchmark in Romania for quality renovations. Our plans include:">
+                       Nu ne oprim aici. Ne dorim să creștem natural și să devenim un punct de referință în România pentru renovări de calitate. Planurile noastre includ:
+                    </p>
+                    <ul class="list-none space-y-3">
+                        <li class="flex gap-3">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span class="translate-text"
+                                  data-ro="<strong>Extinderea echipei:</strong> Căutăm constant oameni pasionați pentru a putea prelua proiecte tot mai mari."
+                                  data-en="<strong>Team expansion:</strong> We are constantly looking for passionate people to take on larger projects.">
+                                  <strong>Extinderea echipei:</strong> Căutăm constant oameni pasionați pentru a putea prelua proiecte tot mai mari.
+                            </span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span class="translate-text"
+                                  data-ro="<strong>Dotări moderne:</strong> Investim în scule și tehnologii noi pentru ca munca noastră să fie tot mai rapidă și mai precisă."
+                                  data-en="<strong>Modern equipment:</strong> We invest in new tools and technologies to make our work faster and more precise.">
+                                  <strong>Dotări moderne:</strong> Investim în scule și tehnologii noi pentru ca munca noastră să fie tot mai rapidă și mai precisă.
+                            </span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span class="translate-text"
+                                  data-ro="<strong>Parteneriate de durată:</strong> Vrem să fim firma la care apelezi cu încredere și a doua oară."
+                                  data-en="<strong>Lasting partnerships:</strong> We want to be the company you call with confidence a second time.">
+                                  <strong>Parteneriate de durată:</strong> Vrem să fim firma la care apelezi cu încredere și a doua oară.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center pt-6 border-t border-gray-100 dark:border-gray-800">
+                    <p class="text-lg font-bold italic text-primary translate-text"
+                       data-ro="Pe scurt, aducem experiența din Spania și o dezvoltăm aici, pentru casa ta."
+                       data-en="In short, we bring the experience from Spain and develop it here, for your home.">
+                       Pe scurt, aducem experiența din Spania și o dezvoltăm aici, pentru casa ta.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
     <div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 hidden flex items-center justify-center p-4 backdrop-blur-sm" onclick="closeLightbox()">
         <div class="relative max-w-5xl w-full h-full flex items-center justify-center">
