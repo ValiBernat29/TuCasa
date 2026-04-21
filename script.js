@@ -15,6 +15,39 @@ function openStory() {
     }
 }
 
+function openServicesModal() {
+    const modal = document.getElementById('services-modal');
+    const backdrop = document.getElementById('services-backdrop');
+    const panel = document.getElementById('services-panel');
+
+    if (modal && backdrop && panel) {
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            backdrop.classList.remove('opacity-0');
+            panel.classList.remove('translate-y-full');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeServicesModal() {
+    const modal = document.getElementById('services-modal');
+    const backdrop = document.getElementById('services-backdrop');
+    const panel = document.getElementById('services-panel');
+
+    if (modal && backdrop && panel) {
+        backdrop.classList.add('opacity-0');
+        panel.classList.add('translate-y-full');
+
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }, 500);
+    }
+}
+
+
+
 function closeStory() {
     const modal = document.getElementById('story-modal');
     const backdrop = document.getElementById('story-backdrop');
@@ -189,6 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.key === "Escape") {
             closeLightbox();
             closeStory();
+            closeServicesModal();
         }
     });
 

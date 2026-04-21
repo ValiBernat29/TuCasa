@@ -231,9 +231,12 @@
                 <div>
                     <h5 class="text-white font-bold mb-6 translate-text" data-ro="Servicii" data-en="Services">Servicii</h5>
                     <ul class="space-y-4 text-sm">
-                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Renovări complete" data-en="Full Home Renovation">Renovări complete</a></li>
-                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Parchet" data-en="Parquet Flooring">Parchet masiv</a></li>
-                        <li><a class="hover:text-primary transition-colors translate-text" href="#" data-ro="Tâmplărie custom" data-en="Custom Millwork">Tâmplărie custom</a></li>
+                        <li><button class="hover:text-primary transition-colors translate-text" onclick="openServicesModal()" data-ro="Renovări complete" data-en="Full Home Renovation">Renovări complete</button></li>
+                        <li><button class="hover:text-primary transition-colors translate-text" onclick="openServicesModal()" data-ro="Parchet" data-en="Parquet Flooring">Parchet masiv</button></li>
+                        <li><button class="hover:text-primary transition-colors translate-text" onclick="openServicesModal()" data-ro="Cabane lemn" data-en="Wooden Cabins">Cabane lemn</button></li>
+                        <li><button class="hover:text-primary transition-colors translate-text" onclick="openServicesModal()" data-ro="Terase" data-en="Terraces">Terase</button></li>
+                        <li><button class="hover:text-primary transition-colors translate-text" onclick="openServicesModal()" data-ro="Pergole" data-en="Pergolas">Pergole</button></li>
+                        <li><button class="hover:text-primary transition-colors translate-text" onclick="openServicesModal()" data-ro="Foișoare" data-en="Shutters">Foișoare</button></li>
                     </ul>
                 </div>
                 <div>
@@ -273,6 +276,7 @@
             </div>
         </div>
     </footer>
+    
     <div id="story-modal" class="fixed inset-0 z-[100] hidden">
     <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity opacity-0" id="story-backdrop" onclick="closeStory()"></div>
     
@@ -359,6 +363,71 @@
                    Pe scurt, aducem experiența din Spania și o dezvoltăm aici, pentru casa ta.
                 </p>
             </div>
+        </div>
+    </div>
+</div>
+
+<div id="services-modal" class="fixed inset-0 z-[100] hidden">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity opacity-0" id="services-backdrop" onclick="closeServicesModal()"></div>
+
+    <div id="services-panel" class="absolute bottom-0 left-0 w-full bg-white dark:bg-[#151718] rounded-t-3xl shadow-2xl transform transition-transform duration-500 translate-y-full flex flex-col max-h-[110vh] lg:max-h-[100vh]">
+
+        <div class="p-6 border-b border-gray-100 dark:border-gray-800 flex justify-between items-center sticky top-0 bg-white dark:bg-[#151718] z-10 rounded-t-3xl">
+            <h2 class="text-2xl font-black text-charcoal dark:text-white translate-text" data-ro="Serviciile Noastre" data-en="Our Services">
+                Serviciile Noastre
+            </h2>
+            <button onclick="closeServicesModal()" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors text-charcoal dark:text-white">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+
+        <div class="p-6 lg:p-10 overflow-y-auto space-y-8 text-stone dark:text-gray-300 leading-relaxed">
+
+            <div>
+                <p class="mb-4 translate-text"
+                   data-ro="Oferim soluții complete pentru a transforma locuința ta într-un spațiu modern și confortabil, executate cu rigoare și profesionalism."
+                   data-en="We offer complete solutions to transform your home into a modern and comfortable space, executed with rigor and professionalism.">
+                    Oferim soluții complete pentru a transforma locuința ta într-un spațiu modern și confortabil, executate cu rigoare și profesionalism.
+                </p>
+            </div>
+
+            <div class="bg-primary/5 p-6 rounded-xl border border-primary/10">
+                <h3 class="text-xl font-bold text-primary mb-4 translate-text" data-ro="Ce oferim" data-en="What We Offer">Ce oferim</h3>
+                <ul class="list-none space-y-4">
+                    <li class="flex gap-3 items-center">
+                        <span class="material-symbols-outlined text-primary">done_outline</span>
+                        <span class="translate-text" data-ro="Montaj parchet" data-en="Parquet installation">Montaj parchet</span>
+                    </li>
+                    <li class="flex gap-3 items-center">
+                        <span class="material-symbols-outlined text-primary">done_outline</span>
+                        <span class="translate-text" data-ro="Montaj mobilă" data-en="Furniture assembly">Montaj mobilă</span>
+                    </li>
+                    <li class="flex gap-3 items-center">
+                        <span class="material-symbols-outlined text-primary">done_outline</span>
+                        <span class="translate-text" data-ro="Renovări generale" data-en="General renovations">Renovări generale</span>
+                    </li>
+                    <li class="flex gap-3 items-center">
+                        <span class="material-symbols-outlined text-primary">done_outline</span>
+                        <span class="translate-text" data-ro="Cabane lemn" data-en="Wooden cabins">Cabane lemn</span>
+                    </li>
+                    <li class="flex gap-3 items-center">
+                        <span class="material-symbols-outlined text-primary">done_outline</span>
+                        <span class="translate-text" data-ro="Terase & Pergole" data-en="Terraces & Pergolas">Terase & Pergole</span>
+                    </li>
+                    <li class="flex gap-3 items-center">
+                        <span class="material-symbols-outlined text-primary">done_outline</span>
+                        <span class="translate-text" data-ro="Foișoare" data-en="Garden shelters">Foișoare</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="text-center pt-6 border-t border-gray-100 dark:border-gray-800">
+                <a href="requests.html" class="inline-block bg-primary text-white px-10 py-4 rounded-xl font-black text-lg hover:shadow-xl transition-all translate-text"
+                   data-ro="Începe un proiect" data-en="Get Started">
+                    Începe un proiect
+                </a>
+            </div>
+
         </div>
     </div>
 </div>
